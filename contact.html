@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Manager</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cedarville+Cursive&family=Nixie+One&family=Send+Flowers&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome for the magnifier icon -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <link rel="stylesheet" href="css/globals.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+
+<body>
+  <div class="page-container">
+    <!-- === SITE HEADER === -->
+    <header class="site-header">
+      <div class="aqua-link">
+        <img src="webicon.png" alt="AquaLink Logo" class="logo-icon" />
+        <div class="logo-text">
+          <span class="text-wrapper">Aqua</span>
+          <span class="span">Link</span>
+        </div>
+      </div>
+
+      <div class="frame">
+        <p class="greeting">
+          <span class="hello-word">Hello,</span>
+          <span id="userName" class="user-name">User</span>
+        </p>
+        <a href="about.html" class="text-pop-up">
+          <span class="MY-TEXT">ABOUT</span>
+        </a>
+        <button class="component-SU" id="signOutButton">SIGN OUT</button>
+      </div>
+    </header>
+
+    <!-- === MAIN CONTENT === -->
+    <main class="main-content">
+      <div class="search-bar">
+        <!-- search-wrapper starts here -->
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search"
+          />
+        </div>
+        <!-- add-user button stays to the right -->
+        <button class="add-user-btn" id="openAddModalBtn">
+          <img src="images/AddVector.svg" alt="Add User" />
+        </button>
+      </div>
+
+      <!-- Contact rows injected here -->
+      <div class="contact-table" id="contactTable"></div>
+    </main>
+  </div> <!-- /.page-container -->
+
+  <!-- === ADD CONTACT MODAL === -->
+  <div id="addContactModal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <h2>ADD CONTACT</h2>
+      <form id="addContactForm" novalidate>
+        <input type="text" id="firstNameInput" placeholder="First Name" required />
+        <input type="text" id="lastNameInput" placeholder="Last Name" required />
+        <input type="email" id="emailInput" placeholder="Email" required />
+        <input type="tel" id="phoneInput" placeholder="Phone Number" required />
+
+        <div class="modal-buttons">
+          <button type="submit" class="submit-btn">ADD</button>
+          <button type="button" class="cancel-btn" id="cancelAddContactBtn">
+            CANCEL
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- === EXTERNAL JAVASCRIPT === -->
+  <script src="js/searchContact.js"></script>
+  <script src="js/tableFunctionality.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/deleteContact.js"></script>
+  <script src="js/updateContact.js"></script>
+</body>
+</html>

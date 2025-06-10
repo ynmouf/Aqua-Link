@@ -1,2 +1,2 @@
-# Aqua-Link
-contact manager
+# Small-Project
+cop4331 Small Project

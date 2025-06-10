@@ -1,0 +1,227 @@
+/* === PAGE LAYOUT === */
+.HOME-PAGE {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.HOME-PAGE .div {
+  background-color: #ffffff;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+
+/* === NAVIGATION LINKS === */
+.HOME-PAGE .frame {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: absolute;
+  top: 50px;
+  right: 80px;
+}
+
+.text-pop-up .MY-TEXT,
+.text-pop-up,
+.component-SU {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  color: #163440;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+/* === SIGN UP BUTTON === */
+.component-SU {
+  padding: 0.5rem 1.2rem;
+  background-color: #163440;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.component-SU:hover {
+  background-color: #1e4558;
+}
+
+.text-pop-up:hover .MY-TEXT {
+  text-decoration: underline;
+  color: #1e4558;
+}
+
+/* === MODAL OVERLAY (shared for login & signup) === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999 !important;; 
+}
+/* === MODAL BOX === */
+.modal-box {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 100000 !important;;
+}
+
+
+
+/* === MODAL HEADER === */
+.modal-box h2 {
+  font-size: 2rem;
+  font-weight: 700;  
+  color: #163440;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* === MODAL FORM === */
+.modal-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-box input[type="text"],
+.modal-box input[type="password"] {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #427f8c;
+  border-radius: 999px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.modal-box input:focus {
+  border-color: #1e4558;
+}
+
+/* === MODAL SUBMIT BUTTON === */
+.modal-box .submit-btn {
+  background-color: #163440;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 999px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-box .submit-btn:hover {
+  background-color: #1e4558;
+}
+
+/* === ERROR MESSAGE (optional use) === */
+.modal-box .error-message {
+  color: #cc4b4b;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.password-hint {
+  display: block;           /* visible by default */
+  margin: 0.5rem 0 .75rem;  
+  font-size: 0.85rem;
+  color: #6a7a8c;
+  white-space: normal;      /* allow wrapping */
+  text-align: center;     
+}
+
+
+.input-wrapper input:focus + .input-help {
+  display: none !important;
+}
+
+
+.modal-box form input {
+  width: 100%;
+  box-sizing: border-box;
+
+}
+.error-text {
+  font-size: 0.85rem;
+  color: #c0392b;
+  margin-top: 0.25rem;
+}
+.modal-footer {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: #6a7a8c;
+}
+
+.modal-footer a {
+  color: #163440;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ======== PASSWORD TOGGLE STYLES ======== */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding-right: 2.5rem;
+  box-sizing: border-box;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #427f8c;
+  padding: 0;
+}
+
+/* === VIDEO EMBED === */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 11rem auto 2rem auto;  
+  z-index: 0 !important;
+}
+
+.centered-video {
+ 
+  width: 70%;
+  max-width: 1200px;
+  height: auto;        
+  border-radius: 8px;  
+}

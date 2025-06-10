@@ -1,0 +1,117 @@
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #ffffff;
+  color: #222222;
+}
+
+/* === Shared Site Header Layout === */
+.site-header {
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header-container {
+  width: 1440px;
+  height: 160px;
+  position: relative;
+}
+
+/* === Logo + Text === */
+.aqua-link {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: absolute;
+  top: 50px;
+  left: 80px;
+}
+
+.logo-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+
+.logo-text {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  line-height: 1;
+}
+
+.logo-text .text-wrapper {
+  font-family: 'Nixie One', sans-serif;
+  font-size: 3.8rem;
+  font-weight: 400;
+  color: #163440;
+}
+
+.logo-text .span {
+  font-family: 'Send Flowers', cursive;
+  font-size: 4.5rem;
+  color: #427f8c;
+}
+
+
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline-offset: 2px;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Base styling for default buttons */
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+}

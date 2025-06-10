@@ -1,0 +1,269 @@
+/* === PAGE LAYOUT === */
+.HOME-PAGE {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .HOME-PAGE .div {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+  }
+  
+  /* === LOGO SECTION === */
+  .aqua-link {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: absolute;
+    top: 50px;
+    left: 80px;
+  }
+  .logo-ellipse {
+    width: 83px;
+    height: 83px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+  }
+  
+  .ellipse {
+    width: 200px;
+    height: 200px;
+    background-color: #000000;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  }
+
+
+  .ellipse:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+  }
+
+
+  .ellipse img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .ellipse:hover img {
+  transform: scale(1.05);
+  }
+
+  .team-members {
+  display: grid;
+  
+  gap: 75px;  /* spacing between ellipses */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+
+  place-items: center; /* align at center of grid cell  */
+  max-width: 800px;
+  margin: 0 auto;
+  
+  }
+
+  /* Offset the top row (1st and 2nd) slightly left */
+.team-members .member:nth-child(1),
+.team-members .member:nth-child(2) {
+  transform: translateX(-100px);
+}
+
+/* Offset the bottom row (3rd and 4th) slightly right */
+.team-members .member:nth-child(3),
+.team-members .member:nth-child(4) {
+  transform: translateX(100px);
+}
+
+
+  .member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: transparent; /* no background color */
+  box-shadow: none;        /* no shadow */
+  transition: none;        /* no hover transform or shadow */
+  padding: 0;
+  }
+
+
+.member-name {
+  font-family: 'Victor Mono';
+  font-size: 1.3rem;
+  font-weight: 400;
+  transform: skewX(-8deg);
+  color: #163440;
+  margin-top: 15px;
+  margin-bottom: 4px;
+  }
+
+.member-role {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: cadetblue;
+  margin: 0;
+}
+
+  .main-content {
+    padding: 150px;
+  }
+  
+  .logo-text {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin: 0;
+    line-height: 1;
+  }
+  
+  .logo-text .text-wrapper {
+    font-family: 'Nixie One', sans-serif;
+    font-size: 3.8rem;
+    font-weight: 400;
+    color: #163440;
+  }
+  
+  .logo-text .span {
+    font-family: 'Send Flowers', cursive;
+    font-size: 4.5rem;
+    color: #427f8c;
+  }
+  
+  /* === NAVIGATION LINKS === */
+  .HOME-PAGE .frame {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: absolute;
+    top: 50px;
+    right: 80px;
+  }
+  
+  /* Shared styles: ABOUT, LOG IN, SIGN UP */
+  .text-pop-up .MY-TEXT,
+  .text-pop-up,
+  .component-SU {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    color: #163440;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    line-height: 1;
+    text-decoration: none;
+  }
+  
+  .component-SU:hover {
+    background-color: #1e4558;
+  }
+  
+  /* Optional: hover for text links */
+  .text-pop-up:hover .MY-TEXT {
+    text-decoration: underline;
+    color: #1e4558;
+  }
+
+  
+  /* === Sign-Up Modal Box (already styled, but keep here for centrality) */
+  
+  /* === LOGIN MODAL === */
+.login-modal, .signup-modal {
+    width: 400px;
+    padding: 40px;
+    border: 1px solid #427f8c;
+    border-radius: 12px;
+    background-color: white;
+    margin: 100px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+  }
+  
+  .login-modal h2, 
+  .signup-modal h2 {
+    font-size: 2rem;
+    color: #163440;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .login-modal form, 
+  .signup-modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .login-modal input[type="password"],
+  .login-modal input[type="text"],
+  .signup-modal input[type="password"],
+  .signup-modal input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #427f8c;
+    border-radius: 999px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+  
+  .login-modal input:focus {
+    border-color: #1e4558;
+  }
+  
+  .submit-btn {
+    background-color: #163440;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 999px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #1e4558;
+  }
+  
+  .error-message {
+    color: #cc4b4b;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+  
+  /* Modal Overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  

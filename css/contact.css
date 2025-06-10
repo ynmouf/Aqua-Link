@@ -1,0 +1,675 @@
+/* === BASE === */
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+/* === PAGE CONTAINER === */
+.HOME-PAGE {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.HOME-PAGE .div {
+  background-color: #ffffff;
+  width: 1440px;
+  position: relative;
+}
+
+
+  
+
+/* === NAVIGATION === */
+.frame {
+  display: flex;
+  /* Align greeting, ABOUT, and SIGN OUT on the same baseline: */
+  align-items: baseline;
+  /* Increase horizontal gap slightly: */
+  gap: 32px;
+  position: absolute;
+  top: 50px;
+  right: 80px;
+}
+
+/* The selector “.text-pop-up .MY-TEXT, .text-pop-up, .component-SU” is unchanged: */
+.text-pop-up .MY-TEXT,
+.text-pop-up,
+.component-SU {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  color: #163440;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+/* === SIGN UP BUTTON === */
+.component-SU {
+  padding: 0.5rem 1.2rem;
+  background-color: #163440;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.component-SU:hover {
+  background-color: #1e4558;
+}
+
+/* === GREETING SECTION === */
+
+.greeting {
+  display: flex;
+
+  align-items: baseline;
+  gap: 6px; /* spacing between "Hello," and "User" */
+  margin: 0;
+}
+
+.hello-word {
+  font-family: 'Cedarville Cursive', cursive;
+  color: #427f8c;
+
+  font-size: 1.8rem;
+  text-transform: none;
+
+  line-height: 1;
+  margin: 0;
+}
+
+
+.punctuation {
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 1.05rem;
+  color: #427f8c;
+  line-height: 1;
+}
+
+#userName {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  color: #163440;
+  line-height: 1;
+  margin: 0;
+}
+
+/* === SEARCH BAR === */
+.search-bar {
+  margin: 200px auto 40px;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+#searchInput {
+  flex-grow: 1;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: 2px solid #427f8c;
+  border-radius: 999px;
+  outline: none;
+}
+
+#searchBtn {
+  padding: 12px 20px;
+  background-color: #163440;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.add-user-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #C5D9D9, #FFFFFF);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease;
+}
+
+.add-user-btn:hover {
+  transform: scale(1.05);
+}
+
+.add-user-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-table .icon-btn {
+  background: linear-gradient(to bottom, #C5D9D9, #ffffff) !important;
+  border: none;
+  border-radius: 999px;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-table .icon-btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-table .icon-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+/* === CONTACT LIST === */
+.contact-table {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.contact-row:last-child {
+  border-bottom: none;
+}
+
+.contact-row span {
+  flex: 1;
+  font-size: 1rem;
+  color: #163440;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #163440;
+  transition: transform 0.2s ease;
+}
+
+.actions button:hover {
+  transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .frame {
+    flex-direction: column;
+    gap: 12px;
+    right: 20px;
+    top: 20px;
+  }
+
+  .aqua-link {
+    left: 20px;
+    top: 20px;
+    gap: 12px;
+  }
+
+  .search-bar {
+    width: 90%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .contact-table {
+    width: 95%;
+  }
+
+  .component-SU {
+    padding: 10px 20px;
+  }
+}
+
+/* === MODAL OVERLAY (dark semi-transparent) === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  
+}
+
+/* Hide by default */
+.hidden {
+  display: none !important;
+}
+
+/* === MODAL BOX === */
+.modal-box {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+
+
+/* Modal heading */
+.modal-box h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;  
+  color: #163440;
+}
+
+/* Inputs inside modal */
+.modal-box form input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 0.75rem;
+  border: 2px solid #427f8c;
+  border-radius: 999px;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Container for buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Add Button (same style as before) */
+.submit-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 999px;
+  background-color: #163440;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Inline row buttons – reuse existing styling */
+.save-inline {
+  composes: submit-btn;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.cancel-inline {
+  composes: cancel-btn;
+  font-size: 0.9rem;
+}
+
+
+/* === Deep-Red Cancel Button === */
+.cancel-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 999px;
+  background-color: #8B0000; /* deep red (#8B0000) */
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Hover effects */
+.submit-btn:hover {
+  background-color: #1e4558;
+}
+
+.cancel-btn:hover {
+  background-color: #660000; /* slightly darker red on hover */
+}
+
+/* Hide utility class repeated */
+.hidden {
+  display: none !important;
+}
+
+
+
+/* ────────────────────────── Contact Table Card ────────────────────────── */
+.contact-table {
+  background-color: rgba(255,255,255,0.85);
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 95%;
+  max-width: 1100px;
+  box-sizing: border-box;
+}
+
+/* ────────────────────────── Zebra Striping ────────────────────────── */
+#contactTable .contact-row:nth-child(even) {
+  background-color: rgba(197, 217, 217, 0.3);
+}
+
+/* ────────────────────────── Editing Row Layout ────────────────────────── */
+.contact-row.editing {
+  display: grid;
+  grid-template-columns: 3.5fr 3.5fr 2fr 1fr auto; /* name / email / phone / actions */
+  align-items: center;
+  gap: 1rem;
+}
+
+/* name cell: first+last side by side */
+.contact-row.editing .name-col {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* inputs: fill their grid cells & share space */
+.contact-row.editing .name-col input,
+.contact-row.editing .email-col input,
+.contact-row.editing .phone-col input {
+  flex: 1;
+  min-width: 4rem;
+  width: 100%;
+}
+
+
+.contact-row.editing input {
+  /* inherit text styles */
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
+  /* full height of the cell */
+  height: 100%;
+  box-sizing: border-box;
+
+
+  border: none;
+
+  /* soft teal fill */
+  background-color: rgba(197, 217, 217, 0.2);
+
+  /* pill shape */
+  border-radius: 999px;
+  padding: 0 1rem;
+}
+
+/* absolutely no focus outline or shadow */
+.contact-row.editing input:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 1px #C5D9D9;
+}
+.contact-row.editing input {
+  /* Remove the fixed height so padding can grow it */
+  height: auto;
+
+  /* More vertical padding for a taller pill */
+  padding: 0.5rem 1rem;  /* ↑ .5rem top/bottom, 1rem left/right */
+
+
+}
+
+/* inline Save / Cancel buttons */
+.contact-row.editing .actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* allow the entire page to scroll, not just the content inside .page-container */
+html, body {
+  height: auto;
+  min-height: 100%;
+  overflow-y: auto;
+}
+
+/* give extra white space below the table */
+.contact-table {
+  margin: 2rem auto 4rem auto;  /* was 2rem auto → now top 2rem, left/right auto, bottom 4rem */
+}
+
+
+.page-container {
+  padding-bottom: 4rem;  /* extra space under everything */
+}
+
+
+/* push footer/pager further below the rows */
+#contactPager {
+  margin-top: 2rem;
+}
+#contactPager button {
+  transition: background-color 0.2s, color 0.2s;
+}
+#contactPager button:hover:not(:disabled) {
+  background-color: #EAF3F3;
+}
+
+/* ───────────────────── Pager Container ───────────────────── */
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 0.75rem;
+}
+
+/* ───────────────────── Prev/Next Text Buttons ───────────────────── */
+.pager-button {
+  background: linear-gradient(to bottom, #C5D9D9, #FFFFFF);
+  border: 1px solid #C5D9D9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #163440;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+.pager-button:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* ───────────────────── First/Last Arrow Buttons ───────────────────── */
+.pager-arrow-btn {
+  background: linear-gradient(to bottom, #C5D9D9, #FFFFFF);
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  padding: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+.pager-arrow-btn:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+.pager-arrow-btn img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;        
+  margin-bottom: 2rem; 
+}
+
+.search-wrapper {
+  position: relative;
+  flex: 1;             /* grow to take all the leftover space */
+}
+
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;   
+  padding-left: 20rem;     
+  border: 2px solid #3a8b94;
+  border-radius: 999px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;              
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 1.1rem;
+  color: #427F8C;
+}
+
+
+.add-user-btn {
+  margin: 0;           
+  flex-shrink: 0;     
+}
+
+#searchInput {
+  padding-left: 3rem;
+}
+
+/* ========================================================================== *
+ *                            PAGINATION STYLES                              
+ * ========================================================================= */
+
+/* ─────────────────── Page-number buttons ─────────────────── */
+#contactPager .pager-button {
+  background-color: #C5D9D9 !important;      /* flat light-teal */
+  border: none !important;
+  border-radius: 4px !important;             /* slight rounding */
+  color: #163440 !important;                 /* dark-teal text */
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  padding: 0.5rem 0.75rem !important;
+  margin: 0 0.25rem !important;
+  box-shadow: none !important;
+  background-image: none !important;
+  cursor: pointer !important;
+}
+
+#contactPager .pager-button:hover:not(.active):not(:disabled) {
+  background-color: #B0CECC !important;     /* hover lighten */
+}
+
+#contactPager .pager-button:disabled {
+  opacity: 0.4 !important;
+  cursor: default !important;
+}
+
+#contactPager .pager-button.active {
+  background-color: #427F8C !important;     /* accent fill */
+  color: #FFFFFF !important;
+}
+
+/* ───────────────────── Prev/Next pill buttons ───────────────────── */
+#contactPager .pager-arrow-btn {
+  background: linear-gradient(to bottom, #C5D9D9, #FFFFFF) !important;
+  color: #2D5F73 !important;                /* teal text */
+  border: 1px solid #C5D9D9 !important;      /* thin outline */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  border-radius: 12px !important;           /* pill shape */
+  padding: 0.75rem 1.5rem !important;        /* generous padding */
+  margin: 0 0.5rem !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  background-image: none !important;
+  cursor: pointer !important;
+}
+
+#contactPager .pager-arrow-btn:hover:not(:disabled) {
+  background: linear-gradient(to bottom, #B0CECC, #FFFFFF) !important;
+}
+
+#contactPager .pager-arrow-btn:disabled {
+  background: #FFFFFF !important;            /* whited-out */
+  color: #CCCCCC !important;
+  border: 1px solid #E0E0E0 !important;
+  box-shadow: none !important;
+  cursor: default !important;
+}
+
+.no-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+  color: #2D5F73;
+}
+
+.no-contacts img {
+  max-width: 500px;
+  margin-bottom: 1rem;
+  opacity: 0.85;
+}
+
+.no-contacts p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+
+
+
+
+
